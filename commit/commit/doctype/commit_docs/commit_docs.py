@@ -456,7 +456,7 @@ def manage_navbar(commit_doc:str, navbar_items, sub_navbar_items=None):
 			})
 			if sub_navbar_items:
 				# find the task in the sub_navbar_items where columnId is equal to item.get('label')
-				sub_items = [sub_item for sub_item in sub_navbar_items if sub_item.get('columnId') == item.get('label')]
+				sub_items = [sub_item for sub_item in sub_navbar_items if sub_item.get('columnId') == item.get('id')]
 				# sort the sub_items by index field
 				sub_items = sorted(sub_items, key=lambda x: x.get('index', 0))
 				# Loop Over the Sub Items

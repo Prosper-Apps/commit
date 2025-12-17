@@ -358,7 +358,7 @@ const CreateNewParentLabel = ({ onColumnCreate, onClose, open }: CreateParentLab
             if (!prev) {
                 // Initialize the column object if it's null
                 return {
-                    id: '', // Provide a default value for required fields
+                    id: crypto.randomUUID(), // Generate a unique ID
                     type: 'Button', // Default type
                     label: '',
                     url: '',
